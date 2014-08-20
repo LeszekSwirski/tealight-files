@@ -17,3 +17,7 @@ for i in range(0,500,4):
     else:
       color("blue")
     spot(i,j,0.1)    
+    
+    
+def handle_frame():
+  pass
