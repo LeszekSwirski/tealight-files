@@ -5,4 +5,4 @@ def foo():
   foo
   bar
   
-no foo
+foo()
