@@ -16,4 +16,4 @@ for i in range(0,500,2):
       color("red")
     else:
       color("blue")
-    circle(i,j,0.2)    
+    spot(i,j,0.1)    
