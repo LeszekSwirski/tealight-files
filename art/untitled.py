@@ -1,7 +1,7 @@
 import github.daviesian.art.poly
 
 
-foo:
+def foo():
   foo
   bar
   
