@@ -13,7 +13,7 @@ def triangle(x,y,size,angle=0):
                 y + size*cos(theta)))
     
   print pts
-  draw_polygon(pts)
+  fill_polygon(pts)
   
   
   
