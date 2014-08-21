@@ -17,7 +17,9 @@ line_width(3)
 def handle_frame():
   global last_frame
   if age() - last_frame < 1./30.:
+    print "dropping frame"
     return
+  
   
   m_a = sin(age()/1.) * 2*pi / 100.
   
