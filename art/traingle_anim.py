@@ -2,7 +2,7 @@ from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_
 from math import sin, cos, pi
 from tealight.utils import sleep, age
 
-num_triangles = 100
+num_triangles = 30
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max(min(screen_width, screen_height)/20. - 10, 1)
 max_l = 95
