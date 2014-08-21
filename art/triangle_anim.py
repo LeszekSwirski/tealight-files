@@ -75,4 +75,4 @@ def handle_frame():
   draw()
   
   last_frame = now()
-  sleep(1000./30.)
+  sleep(1000./30. - 5)
