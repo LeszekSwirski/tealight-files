@@ -2,7 +2,7 @@ from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_
 from math import sin, cos, pi, exp
 from tealight.utils import sleep, now
 
-num_triangles = 30
+num_triangles = 100
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max_size / num_triangles
 max_l = 95
@@ -63,11 +63,11 @@ def handle_mouseup():
 last_frame = 0
 def handle_frame():
   global last_frame
-  if now() - last_frame < 1./30.:
+  if now() - last_frame < 1./60.:
     print "dropping frame"
     return
   
   draw()
   
   last_frame = now()
-  sleep(1000./30.)
+  sleep(1000./120.)
