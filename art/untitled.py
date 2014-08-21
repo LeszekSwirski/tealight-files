@@ -36,7 +36,7 @@ def handle_frame():
     color("hsl(0,100%," + str(i*2-20) + "%)")
     triangle(200,200,200-i*2,i*m_a)
     
-  m_a += 0.01
+  m_a += 0.005
   
   sleep(10)
     
