@@ -35,5 +35,5 @@ def handle_frame():
     polygon(tri)
   
   last_frame = age()
-  #sleep(1000./30.)
+  sleep(1000./30.)
     
