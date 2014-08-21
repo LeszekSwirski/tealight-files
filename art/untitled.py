@@ -26,7 +26,7 @@ def handle_frame():
     fill_polygon(tri)
   
     color("hsl(0,100%," + str(i*4-20) + "%)")
-    draw_polygon(tri)
+    polygon(tri)
   
   sleep(30)
     
