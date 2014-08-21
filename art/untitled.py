@@ -15,7 +15,7 @@ m_a = 0
 
 line_width(3)
 def handle_frame():
-  m_a = sin(now()*2)
+  m_a = sin(now()/5)
   
   color("white")
   box(0,0,screen_width,screen_height)
