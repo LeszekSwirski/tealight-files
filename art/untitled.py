@@ -1,6 +1,6 @@
 from tealight.art import line_width,polygon,color,fill_polygon,clear
 from math import sin, cos, pi
-
+from tealight.utils import sleep
 
 
 
