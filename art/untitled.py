@@ -19,7 +19,7 @@ def handle_frame():
   if age() - last_frame < 1./30.:
     return
   
-  m_a = sin(age()/3.) * 2*pi / 100.
+  m_a = sin(age()/1.) * 2*pi / 100.
   
   color("white")
   box(0,0,screen_width,screen_height)
