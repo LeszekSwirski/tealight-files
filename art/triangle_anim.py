@@ -8,7 +8,7 @@ max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max_size / num_triangles
 max_l = 95
 min_l = 20
-max_pulse_magnitude = 0.1
+max_pulse_magnitude = 0.2
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -63,13 +63,13 @@ line_width(2)
 def handle_mousedown(x,y):
   global mouse_x,pulse_magnitude
   mouse_x = x
-  pulse_magnitude = max_pulse_magnitude * y / screen_height
+  pulse_magnitude = max_pulse_magnitude * (1 - y / screen_height)
 
 def handle_mousemove(x,y):
   global mouse_x,pulse_magnitude
   if mouse_x is not None:
     mouse_x = x
-    pulse_magnitude = max_pulse_magnitude * y / screen_height
+    pulse_magnitude = max_pulse_magnitude * (1 - y / screen_height)
 
 def handle_mouseup():
   global start, mouse_x
