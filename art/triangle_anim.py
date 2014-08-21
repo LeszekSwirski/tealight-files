@@ -68,7 +68,7 @@ def handle_mouseup():
   mouse_x = None
 
 def handle_mousescroll(*args):
-  print args
+  print "scroll", args
 
 last_frame = 0
 def handle_frame():
