@@ -5,6 +5,8 @@ from tealight.utils import sleep, age
 num_triangles = 25
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max(min(screen_width, screen_height)/20. - 10, 1)
+max_l = 90
+min_l = 0
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -21,7 +23,8 @@ def draw():
   box(0,0,screen_width,screen_height)
   
   for i in range(3, 3+num_triangles):
-    size = min_size + (max_size - min_size) * i / num_triangles
+    size = min_size + (max_size - min_size) * float(i) / num_triangles
+    l = min_l + (max_l - min_l) * float(i) / num_triangles
     
     tri = make_triangle(screen_width/2., screen_height/2., size, i*m_a)
     color("hsl(0,100%," + str(i*4) + "%)")
