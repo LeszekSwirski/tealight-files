@@ -27,6 +27,7 @@ def fill_triangle(x,y,size,angle=0):
 m_a = 0
 
 def handle_frame():
+  global m_a
   
   line_width(3)
   for i in range(0,50):
