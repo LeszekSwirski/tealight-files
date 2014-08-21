@@ -1,4 +1,4 @@
-from tealight.art import fill_polygon
+from tealight.art import polygon
 from math import sin, cos, pi
 
 
@@ -12,7 +12,7 @@ def triangle(x,y,size,angle=0):
     pts.append((x + size*sin(theta),
                 y + size*sin(theta)))
     
-  fill_polygon(pts)
+  polygon(pts)
   
   
   
