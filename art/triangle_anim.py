@@ -21,10 +21,10 @@ mouse_x = None
 
 def draw():
   max_twist = 2*pi * 2. / num_triangles
+  age = now() - start
   if mouse_x is not None:
     m_a = (mouse_x / float(screen_width) - 0.5)*2 * max_twist
   else:
-    age = now() - start
     m_a = sin(age/2.) * max_twist * exp(-age/20)
   
   color("black")
