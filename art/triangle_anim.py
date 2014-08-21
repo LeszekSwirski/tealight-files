@@ -41,7 +41,8 @@ def draw():
     
 line_width(2)
 
-def handle_mousedown():
+def handle_mouseout():
+  print "mouse out"
   global start
   start = now()
 
