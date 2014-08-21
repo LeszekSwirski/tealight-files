@@ -1,6 +1,6 @@
 from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_width,screen_height
 from math import sin, cos, pi, exp
-from tealight.utils import sleep, age
+from tealight.utils import sleep, now
 
 num_triangles = 30
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
@@ -16,8 +16,11 @@ def make_triangle(x,y,size,angle=0):
                 y + size*cos(theta)))
   return pts
 
+start = now()
+
 def draw():
-  m_a = sin(age()/2.) * 2*pi * 3. / num_triangles * exp(-age()/20)
+  age = now() - start
+  m_a = sin(age/2.) * 2*pi * 3. / num_triangles * exp(-age/20)
   
   color("black")
   box(0,0,screen_width,screen_height)
@@ -38,6 +41,10 @@ def draw():
     
 line_width(2)
 
+def handle_mouseclick():
+  global start
+  start = now()
+
 last_frame = 0
 def handle_frame():
   global last_frame
@@ -47,5 +54,5 @@ def handle_frame():
   
   draw()
   
-  last_frame = age()
+  last_frame = now()
   sleep(1000./30.)
