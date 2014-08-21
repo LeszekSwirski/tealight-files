@@ -29,7 +29,7 @@ def draw():
     tri = make_triangle(screen_width/2.,
                         screen_height/2.,
                         max_size-size,
-                        i*m_a + (i%2)*pi)
+                        i*m_a)
     color("hsl(0,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
   
