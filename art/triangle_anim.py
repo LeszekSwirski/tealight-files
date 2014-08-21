@@ -1,6 +1,7 @@
 from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_width,screen_height
 from math import sin, cos, pi, exp
 from tealight.utils import sleep, now
+from random import random
 
 num_triangles = 30
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
@@ -18,6 +19,7 @@ def make_triangle(x,y,size,angle=0):
 
 start = now()
 mouse_x = None
+pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
 
 def draw():
   max_twist = 2*pi * 5. / num_triangles
@@ -33,7 +35,7 @@ def draw():
   for i in range(0, num_triangles):
     size = min_size + (max_size - min_size) * float(i) / num_triangles
     size = max_size-size
-    size *= (sin(age*2+i*30)*0.1 + 1)
+    size *= (sin(age*2 + pulse_offset[i])*0.1 + 1)
     
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
