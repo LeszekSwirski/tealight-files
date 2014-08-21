@@ -4,7 +4,7 @@ from tealight.utils import sleep, age
 
 num_triangles = 30
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
-min_size = max(min(screen_width, screen_height)/20. - 10, 1)
+min_size = max_size / num_triangles
 max_l = 95
 min_l = 10
 
