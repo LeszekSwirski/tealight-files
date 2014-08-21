@@ -65,7 +65,7 @@ def handle_mouseup():
 last_frame = 0
 def handle_frame():
   global last_frame
-  if now() - last_frame < 1./60.:
+  if now() - last_frame < 1./30.:
     #print "dropping frame"
     return
   
