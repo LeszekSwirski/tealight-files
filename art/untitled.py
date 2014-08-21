@@ -1,4 +1,4 @@
-from tealight.art import line_width,polygon,color,fill_polygon
+from tealight.art import line_width,polygon,color,fill_polygon,clear
 from math import sin, cos, pi
 
 
@@ -28,6 +28,8 @@ m_a = 0
 
 def handle_frame():
   global m_a
+  
+  clear()
   
   line_width(3)
   for i in range(0,50):
