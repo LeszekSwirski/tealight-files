@@ -8,7 +8,7 @@ max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max_size / num_triangles
 max_l = 95
 min_l = 20
-max_pulse_magnitude = 0.2
+max_pulse_magnitude = 0.4
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -22,7 +22,7 @@ start = now()
 mouse_x = None
 pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
 rot_pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
-pulse_magnitude = max_pulse_magnitude/2
+pulse_magnitude = max_pulse_magnitude/4
 
 real_max_twist = 2*pi * 3 / num_triangles
 max_twist = real_max_twist
