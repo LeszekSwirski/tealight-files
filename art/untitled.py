@@ -16,4 +16,4 @@ def triangle(x,y,size,angle=0):
   
   
   
-triangle(50,50,50)
+triangle(100,100,50)
