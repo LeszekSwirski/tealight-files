@@ -26,12 +26,12 @@ def fill_triangle(x,y,size,angle=0):
 
 m_a = 0
 
+line_width(3)
 def handle_frame():
   global m_a
   
   clear()
   
-  line_width(3)
   for i in range(0,50):
     color("hsl(0,100%," + str(i*2) + "%)")
     fill_triangle(200,200,200-i*2,i*m_a)
