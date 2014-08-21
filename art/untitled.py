@@ -17,4 +17,4 @@ def triangle(x,y,size,angle=0):
   
 
 for i in range(0,20):
-  triangle(100,100,200-i*2,i*0.4)
+  triangle(200,200,200-i*2,i*0.4)
