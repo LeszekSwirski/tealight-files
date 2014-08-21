@@ -2,6 +2,10 @@ from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_
 from math import sin, cos, pi
 from tealight.utils import sleep, age
 
+num_triangles = 25
+max_size = max(min(screen_width, screen_height)/2. - 10, 10)
+min_size = max(min(screen_width, screen_height)/20. - 10, 1)
+
 def make_triangle(x,y,size,angle=0):
   pts = []
   for i in range(0,3):
@@ -10,28 +14,32 @@ def make_triangle(x,y,size,angle=0):
                 y + size*cos(theta)))
   return pts
 
-last_frame = 0
-
+def draw():
+  m_a = sin(age()/1.) * 2*pi * 1 / num_triangles.
+  
+  color("white")
+  box(0,0,screen_width,screen_height)
+  
+  for i in range(3, 3+num_triangles):
+    size = min_size + (max_size - min_size) * i / num_triangles
+    
+    tri = make_triangle(screen_width/2., screen_height/2., size, i*m_a)
+    color("hsl(0,100%," + str(i*4) + "%)")
+    fill_polygon(tri)
+  
+    color("hsl(0,100%," + str(i*4-20) + "%)")
+    polygon(tri)
+    
 line_width(3)
+
+last_frame = 0
 def handle_frame():
   global last_frame
   if age() - last_frame < 1./30.:
     print "dropping frame"
     return
   
-  
-  m_a = sin(age()/1.) * 2*pi / 100.
-  
-  color("white")
-  box(0,0,screen_width,screen_height)
-  
-  for i in range(1,25):
-    tri = make_triangle(200,200,200-i*6,2*i*m_a)
-    color("hsl(0,100%," + str(i*4) + "%)")
-    fill_polygon(tri)
-  
-    color("hsl(0,100%," + str(i*4-20) + "%)")
-    polygon(tri)
+  draw()
   
   last_frame = age()
   sleep(1000./30.)
