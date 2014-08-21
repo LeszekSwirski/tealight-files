@@ -8,8 +8,7 @@ def make_triangle(x,y,size,angle=0):
     theta = angle + i*2*pi/3
     pts.append((x + size*sin(theta),
                 y + size*cos(theta)))
-  return pts;
-  
+  return pts
 
 last_frame = 0
 
