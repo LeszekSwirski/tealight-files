@@ -18,4 +18,4 @@ def triangle(x,y,size,angle=0):
 
 for i in range(0,50):
   color("hsl(0,100%," + str(i*2) + "%)")
-  triangle(200,200,200-i*2,i*0.3)
+  triangle(200,200,200-i*2,i*0.2)
