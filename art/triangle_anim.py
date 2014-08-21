@@ -22,11 +22,16 @@ mouse_x = None
 pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
 rot_pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
 
+real_max_twist = 2*pi * 3 / num_triangles
+max_twist = real_max_twist
+
 def draw():
-  max_twist = 2*pi * 3 / num_triangles
+  global max_twist
+  
   age = now() - start
   if mouse_x is not None:
-    m_a = (mouse_x / float(screen_width) - 0.5)*2 * max_twist
+    m_a = (mouse_x / float(screen_width) - 0.5)*2 * real_max_twist
+    max_twist = m_a
   else:
     m_a = cos(age/2.) * max_twist * exp(-age/20)
   
