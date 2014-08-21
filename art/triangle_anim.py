@@ -17,7 +17,7 @@ def make_triangle(x,y,size,angle=0):
   return pts
 
 def draw():
-  m_a = sin(age()/2.) * 2*pi * 3. / num_triangles * exp(-age())
+  m_a = sin(age()/2.) * 2*pi * 3. / num_triangles * exp(-age()/20)
   
   color("black")
   box(0,0,screen_width,screen_height)
