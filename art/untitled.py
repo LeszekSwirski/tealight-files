@@ -34,10 +34,10 @@ def handle_frame():
   
   for i in range(0,50):
     color("hsl(0,100%," + str(i*2) + "%)")
-    fill_triangle(200,200,200-i*2,i*m_a)
+    fill_triangle(200,200,200-i*3,i*m_a)
   
     color("hsl(0,100%," + str(i*2-20) + "%)")
-    triangle(200,200,200-i*2,i*m_a)
+    triangle(200,200,200-i*3,i*m_a)
     
   m_a += 0.002
   
