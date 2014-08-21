@@ -15,5 +15,6 @@ def triangle(x,y,size,angle=0):
   fill_polygon(pts)
   
   
-  
-triangle(100,100,50,0.1)
+
+for i in range(0,20):
+  triangle(100,100,200-i*2,i*0.4)
