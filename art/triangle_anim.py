@@ -41,7 +41,7 @@ def draw():
     
 line_width(2)
 
-def handle_mouseclick():
+def handle_mousedown():
   global start
   start = now()
 
