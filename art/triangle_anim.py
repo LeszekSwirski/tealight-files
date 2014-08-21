@@ -42,7 +42,7 @@ def draw():
     tri = make_triangle(screen_width/2.,
                         screen_height/2.,
                         size,
-                        i*m_a + sin(age + pulse_offset[i])*0.1)
+                        i*m_a + sin(age + pulse_offset[i])*0.05)
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
   
