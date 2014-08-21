@@ -35,7 +35,7 @@ def draw():
   for i in range(0, num_triangles):
     size = min_size + (max_size - min_size) * float(i) / num_triangles
     size = max_size-size
-    size *= (sin(age + pulse_offset[i])*0.1 + 1)
+    size *= (sin(age*10 + pulse_offset[i])*0.1 + 1)
     
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
