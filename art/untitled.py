@@ -1,5 +1,3 @@
-from tealight.utils import github_load
+from tealight.art import fill_polygon
 
-ian = github_load("daviesian", "logo", "lib")
-
-ian.lib_func()
+fill_polygon([(0,0),(10,10),(20,0)])
