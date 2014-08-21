@@ -1,3 +1,6 @@
 from tealight.art import fill_polygon
 
-fill_polygon([(0,0),(100,100),(200,0)])
+x = 50
+y = 50
+
+fill_polygon([(x+0,y+0),(x+100,y+100),(x+200,y+0)])
