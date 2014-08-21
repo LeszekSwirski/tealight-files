@@ -1,3 +1,3 @@
-from tealight.art import rectangle
+from tealight.art import *
 
 box(0,0,100,100)
