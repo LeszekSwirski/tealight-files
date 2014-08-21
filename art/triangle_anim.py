@@ -30,10 +30,10 @@ def draw():
                         screen_height/2.,
                         max_size-size,
                         i*m_a)
-    color("hsl(0,100%," + str(round(l)) + "%)")
+    color("hsl(180,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
   
-    color("hsl(0,100%," + str(round(l - min_l)) + "%)")
+    color("hsl(180,100%," + str(round(l - min_l)) + "%)")
     polygon(tri)
     
 line_width(3)
