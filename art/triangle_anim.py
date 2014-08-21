@@ -50,7 +50,7 @@ def draw():
     tri = make_triangle(screen_width/2.,
                         screen_height/2.,
                         size,
-                        i*m_a * (1 + sin(now() + rot_pulse_offset[i])*pulse_magnitude)
+                        i*m_a + sin(now() + rot_pulse_offset[i])*pulse_magnitude
                         )
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
