@@ -64,7 +64,7 @@ last_frame = 0
 def handle_frame():
   global last_frame
   if now() - last_frame < 1./60.:
-    print "dropping frame"
+    #print "dropping frame"
     return
   
   draw()
