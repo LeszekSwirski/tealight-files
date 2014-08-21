@@ -8,6 +8,7 @@ max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max_size / num_triangles
 max_l = 95
 min_l = 20
+max_pulse_magnitude = 0.1
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -21,6 +22,7 @@ start = now()
 mouse_x = None
 pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
 rot_pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
+pulse_magnitude = max_pulse_magnitude/2
 
 real_max_twist = 2*pi * 3 / num_triangles
 max_twist = real_max_twist
@@ -41,14 +43,14 @@ def draw():
   for i in range(0, num_triangles):
     size = min_size + (max_size - min_size) * float(i) / num_triangles
     size = max_size-size
-    size *= (sin(now() + pulse_offset[i])*0.05 + 1)
+    size *= (sin(now() + pulse_offset[i])*pulse_magnitude + 1)
     
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
     tri = make_triangle(screen_width/2.,
                         screen_height/2.,
                         size,
-                        i*m_a + sin(now() + rot_pulse_offset[i])*0.05
+                        i*m_a + sin(now() + rot_pulse_offset[i])*pulse_magnitude
                         )
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
@@ -59,13 +61,15 @@ def draw():
 line_width(2)
 
 def handle_mousedown(x,y):
-  global mouse_x
+  global mouse_x,pulse_magnitude
   mouse_x = x
+  pulse_magnitude = max_pulse_magnitude * y / screen_height
 
 def handle_mousemove(x,y):
-  global mouse_x
+  global mouse_x,pulse_magnitude
   if mouse_x is not None:
     mouse_x = x
+    pulse_magnitude = max_pulse_magnitude * y / screen_height
 
 def handle_mouseup():
   global start, mouse_x
