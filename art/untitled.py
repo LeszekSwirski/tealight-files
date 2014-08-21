@@ -24,7 +24,7 @@ def handle_frame():
   color("white")
   box(0,0,screen_width,screen_height)
   
-  for i in range(0,25,1):
+  for i in range(1,25):
     tri = make_triangle(200,200,200-i*6,2*i*m_a)
     color("hsl(0,100%," + str(i*4) + "%)")
     fill_polygon(tri)
