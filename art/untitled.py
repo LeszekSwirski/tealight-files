@@ -13,7 +13,7 @@ def triangle(x,y,size,angle=0):
                 y + size*sin(theta)))
     
   print pts
-  polygon(pts)
+  polygon([(100.0, 100.0), (143.301270189, 143.301270189), (56.6987298108, 56.6987298108)])
   
   
   
