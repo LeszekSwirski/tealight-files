@@ -41,5 +41,5 @@ def handle_frame():
     
   m_a += 0.01
   
-  sleep(100)
+  sleep(30)
     
