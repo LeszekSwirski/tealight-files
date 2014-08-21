@@ -6,7 +6,7 @@ num_triangles = 30
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max_size / num_triangles
 max_l = 95
-min_l = 10
+min_l = 20
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -33,7 +33,7 @@ def draw():
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
   
-    color("hsl(230,100%," + str(round(l - min_l)) + "%)")
+    color("hsl(230,100%," + str(round(l - 10)) + "%)")
     polygon(tri)
     
 line_width(3)
