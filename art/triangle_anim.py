@@ -67,6 +67,9 @@ def handle_mouseup():
   start = now()
   mouse_x = None
 
+def handle_mousescroll(*args):
+  print args
+
 last_frame = 0
 def handle_frame():
   global last_frame
