@@ -32,13 +32,14 @@ def draw():
   
   for i in range(0, num_triangles):
     size = min_size + (max_size - min_size) * float(i) / num_triangles
+    size = max_size-size
     size *= (sin(age)*0.1 + 1)
     
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
     tri = make_triangle(screen_width/2.,
                         screen_height/2.,
-                        max_size-size,
+                        size,
                         i*m_a)
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
