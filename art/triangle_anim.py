@@ -48,7 +48,7 @@ def handle_mouseclick():
 last_frame = 0
 def handle_frame():
   global last_frame
-  if age() - last_frame < 1./30.:
+  if now() - last_frame < 1./30.:
     print "dropping frame"
     return
   
