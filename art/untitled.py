@@ -1,6 +1,20 @@
 from tealight.art import fill_polygon
+from math import sin, cos, pi
 
-x = 50
-y = 50
 
-fill_polygon([(x+0,y+0),(x+100,y+100),(x+200,y+0)])
+
+
+
+def triangle(x,y,size):
+  x0 = sin(0)
+  y0 = cos(0)
+  x1 = sin(2*pi/3)
+  y1 = cos(2*pi/3)
+  x2 = sin(2* 2*pi/3)
+  y2 = cos(2* 2*pi/3)
+  
+  fill_polygon([(x0,y0),(x1,y1),(x2,y2)])
+  
+  
+  
+triangle(50,50,50)
