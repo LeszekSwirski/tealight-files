@@ -33,7 +33,7 @@ def draw():
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
   
-    color("hsl(230,20%," + str(round(l - min_l)) + "%)")
+    color("hsl(230,100%," + str(round(l - min_l)) + "%)")
     polygon(tri)
     
 line_width(3)
