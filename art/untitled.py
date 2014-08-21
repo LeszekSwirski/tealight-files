@@ -12,6 +12,7 @@ def triangle(x,y,size,angle=0):
     pts.append((x + size*sin(theta),
                 y + size*sin(theta)))
     
+  print pts
   polygon(pts)
   
   
