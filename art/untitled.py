@@ -1,5 +1,3 @@
 from tealight.art import rectangle
 
-
-
-lib = __import__("github.daviesian.logo.lib")
+rectangle(0,0,100,100)
