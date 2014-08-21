@@ -48,7 +48,7 @@ line_width(2)
 
 def handle_mousedown(x,y):
   global mouse_x
-  mouse_x = screen_width/2
+  mouse_x = screen_width/2.
 
 def handle_mousemove(x,y):
   global mouse_x
