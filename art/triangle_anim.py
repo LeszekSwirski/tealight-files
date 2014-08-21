@@ -20,6 +20,7 @@ def make_triangle(x,y,size,angle=0):
 start = now()
 mouse_x = None
 pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
+rot_pulse_offset = [random()*2*pi for i in range(0, num_triangles)]
 
 def draw():
   max_twist = 2*pi * 1. / num_triangles
@@ -42,7 +43,7 @@ def draw():
     tri = make_triangle(screen_width/2.,
                         screen_height/2.,
                         size,
-                        i*m_a + sin(age + pulse_offset[i])*0.05)
+                        i*m_a + sin(age + rot_pulse_offset[i])*0.05)
     color("hsl(230,100%," + str(round(l)) + "%)")
     fill_polygon(tri)
   
