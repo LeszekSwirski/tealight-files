@@ -22,7 +22,7 @@ def draw():
   color("black")
   box(0,0,screen_width,screen_height)
   
-  for i in range(5, num_triangles):
+  for i in range(0, num_triangles):
     size = min_size + (max_size - min_size) * float(i) / num_triangles
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
