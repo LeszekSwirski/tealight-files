@@ -21,7 +21,7 @@ mouse_x = None
 
 def draw():
   max_twist = 2*pi * 3. / num_triangles
-  if mouse_x:
+  if mouse_x is not None:
     m_a = (mouse_x / float(screen_width) - 0.5)*2 * max_twist
   else:
     age = now() - start
@@ -49,6 +49,11 @@ line_width(2)
 def handle_mousedown(x,y):
   global mouse_x
   mouse_x = x
+
+def handle_mousemove(x,y):
+  global mouse_x
+  if mouse_x is not None:
+    mouse_x = x
 
 def handle_mouseup():
   global start, mouse_x
