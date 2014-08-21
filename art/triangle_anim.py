@@ -28,7 +28,7 @@ def draw():
   if mouse_x is not None:
     m_a = (mouse_x / float(screen_width) - 0.5)*2 * max_twist
   else:
-    m_a = sin(age/2.) * max_twist * exp(-age/20)
+    m_a = cos(age/2.) * max_twist * exp(-age/20)
   
   color("black")
   box(0,0,screen_width,screen_height)
