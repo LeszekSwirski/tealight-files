@@ -16,6 +16,6 @@ def triangle(x,y,size,angle=0):
   
   
 
-for i in range(0,30):
+for i in range(0,40):
   color("hsl(0,100%," + str(i*2) + "%)")
   triangle(200,200,200-i*2,i*0.4)
