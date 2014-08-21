@@ -5,8 +5,8 @@ from tealight.utils import sleep, age
 num_triangles = 25
 max_size = max(min(screen_width, screen_height)/2. - 10, 10)
 min_size = max(min(screen_width, screen_height)/20. - 10, 1)
-max_l = 90
-min_l = 0
+max_l = 95
+min_l = 5
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -27,10 +27,10 @@ def draw():
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
     tri = make_triangle(screen_width/2., screen_height/2., size, i*m_a)
-    color("hsl(0,100%," + str(i*4) + "%)")
+    color("hsl(0,100%," + (l) + "%)")
     fill_polygon(tri)
   
-    color("hsl(0,100%," + str(i*4-20) + "%)")
+    color("hsl(0,100%," + (l-5) + "%)")
     polygon(tri)
     
 line_width(3)
