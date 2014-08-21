@@ -17,10 +17,15 @@ def make_triangle(x,y,size,angle=0):
   return pts
 
 start = now()
+mouse_x = None
 
 def draw():
-  age = now() - start
-  m_a = sin(age/2.) * 2*pi * 3. / num_triangles * exp(-age/20)
+  max_twist = 2*pi * 3. / num_triangles
+  if mouse_x:
+    m_a = (mouse_x / float(screen_width) - 0.5)*2 * max_twist
+  else:
+    age = now() - start
+    m_a = sin(age/2.) * max_twist * exp(-age/20)
   
   color("black")
   box(0,0,screen_width,screen_height)
@@ -41,10 +46,14 @@ def draw():
     
 line_width(2)
 
-def handle_mouseout():
-  print "mouse out"
-  global start
+def handle_mousedown(x,y):
+  global mouse_x
+  mouse_x = x
+
+def handle_mouseup():
+  global start, mouse_x
   start = now()
+  mouse_x = None
 
 last_frame = 0
 def handle_frame():
