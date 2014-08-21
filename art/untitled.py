@@ -33,10 +33,10 @@ def handle_frame():
   box(0,0,screen_width,screen_height)
   
   for i in range(0,25):
-    color("hsl(0,100%," + str(i*2) + "%)")
+    color("hsl(0,100%," + str(i*4) + "%)")
     fill_triangle(200,200,200-i*6,2*i*m_a)
   
-    color("hsl(0,100%," + str(i*2-20) + "%)")
+    color("hsl(0,100%," + str(i*4-20) + "%)")
     triangle(200,200,200-i*6,2*i*m_a)
     
   m_a += 0.002
