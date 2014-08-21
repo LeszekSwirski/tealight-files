@@ -67,7 +67,7 @@ def handle_mouseup():
   start = now()
   mouse_x = None
 
-def handle_mousescroll(*args):
+def handle_mousewheel(*args):
   print "scroll", args
 
 last_frame = 0
