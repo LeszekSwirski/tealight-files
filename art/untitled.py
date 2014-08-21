@@ -1,6 +1,6 @@
 from tealight.art import line_width,polygon,color,fill_polygon,clear
 from math import sin, cos, pi
-
+from time import time
 
 
 
@@ -29,8 +29,6 @@ m_a = 0
 line_width(3)
 def handle_frame():
   global m_a
-  
-  clear()
   
   for i in range(0,50):
     color("hsl(0,100%," + str(i*2) + "%)")
