@@ -16,7 +16,7 @@ last_frame = 0
 line_width(3)
 def handle_frame():
   global last_frame
-  if age() - last_frame < 1./60.:
+  if age() - last_frame < 1./30.:
     return
   
   m_a = sin(age()/10) * 2*pi / 100
