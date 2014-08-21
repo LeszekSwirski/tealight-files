@@ -1,5 +1,5 @@
 from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_width,screen_height
-from math import sin, cos, pi
+from math import sin, cos, pi, exp
 from tealight.utils import sleep, age
 
 num_triangles = 50
@@ -17,7 +17,7 @@ def make_triangle(x,y,size,angle=0):
   return pts
 
 def draw():
-  m_a = sin(age()/2.) * 2*pi * 3. / num_triangles
+  m_a = sin(age()/2.) * 2*pi * 3. / num_triangles * exp(-age())
   
   color("black")
   box(0,0,screen_width,screen_height)
