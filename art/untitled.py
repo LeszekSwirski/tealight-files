@@ -27,10 +27,10 @@ def draw():
     l = min_l + (max_l - min_l) * float(i) / num_triangles
     
     tri = make_triangle(screen_width/2., screen_height/2., size, i*m_a)
-    color("hsl(0,100%," + (l) + "%)")
+    color("hsl(0,100%," + round(l) + "%)")
     fill_polygon(tri)
   
-    color("hsl(0,100%," + (l-5) + "%)")
+    color("hsl(0,100%," + round(l-5) + "%)")
     polygon(tri)
     
 line_width(3)
