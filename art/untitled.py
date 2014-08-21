@@ -1,6 +1,5 @@
 from tealight.art import line_width,polygon,color,fill_polygon,clear
 from math import sin, cos, pi
-from time import time
 
 
 
@@ -37,4 +36,7 @@ def handle_frame():
     color("hsl(0,100%," + str(i*2-20) + "%)")
     triangle(200,200,200-i*2,i*m_a)
     
-    m_a += 0.00001
+  m_a += 0.1
+  
+  sleep(100)
+    
