@@ -36,7 +36,7 @@ def draw():
     color("hsl(230,100%," + str(round(l - 10)) + "%)")
     polygon(tri)
     
-line_width(3)
+line_width(2)
 
 last_frame = 0
 def handle_frame():
