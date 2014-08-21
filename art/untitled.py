@@ -1,6 +1,6 @@
 from tealight.art import box,line_width,polygon,color,fill_polygon,clear,screen_width,screen_height
 from math import sin, cos, pi
-from tealight.utils import sleep, now
+from tealight.utils import sleep, age
 
 def make_triangle(x,y,size,angle=0):
   pts = []
@@ -11,11 +11,15 @@ def make_triangle(x,y,size,angle=0):
   return pts;
   
 
-m_a = 0
+last_frame = 0
 
 line_width(3)
 def handle_frame():
-  m_a = sin(now()/2) * 2*pi / 2
+  global last_frame
+  if age() - last_frame < 1000./60.:
+    return
+  
+  m_a = sin(age()/2) * 2*pi / 2
   
   color("white")
   box(0,0,screen_width,screen_height)
@@ -28,5 +32,5 @@ def handle_frame():
     color("hsl(0,100%," + str(i*4-20) + "%)")
     polygon(tri)
   
-  sleep(30)
+  last_frame = age()
     
